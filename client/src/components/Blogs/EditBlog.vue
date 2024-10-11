@@ -1,8 +1,8 @@
 <template>
   <div>
-    <h1>แก้ไขสินค้า</h1>
+    <h1>แก้ไขข้อมูล</h1>
     <form v-on:submit.prevent="editBlog">
-      <p>ชื่อสินค้า : <input type="text" v-model="blog.title" /></p>
+      <p>จักรยาน<input type="text" v-model="blog.title" /></p>
       <transition name="fade">
         <div class="thumbnail-pic" v-if="blog.thumbnail != 'null'">
           <img :src="BASE_URL + blog.thumbnail" alt="thumbnail" />
@@ -40,17 +40,17 @@
           />
           <br />
           <button v-on:click.prevent="useThumbnail(picture.name)">
-            Thumbnail
+            Upload
           </button>
           <button v-on:click.prevent="delFile(picture)">Delete</button>
         </li>
       </transition-group>
       <div class="clearfix"></div>
      
-      <p>รายละเอียด : <input type="text" v-model="blog.content" /></p>
+      <p>แบรนด์: <input type="text" v-model="blog.content" /></p>
 
-      <p>ราคา: <input type="text" v-model="blog.category" /></p>
-      <p>จำนวน: <input type="text" v-model="blog.status" /></p>
+      <p>ประเภทจักรยาน: <input type="text" v-model="blog.category" /></p>
+      <p>เฟรม: <input type="text" v-model="blog.status" /></p>
       <p>
         <button type="submit">ยืนยัน</button>
         <button v-on:click="navigateTo('/blogs')">กลับ</button>

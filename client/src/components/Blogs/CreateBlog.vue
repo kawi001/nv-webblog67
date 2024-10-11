@@ -1,9 +1,9 @@
 <template>
   <div>
-    <h1>เพิ่มสินค้า</h1>
+    <h1>เพิ่มข้อมูล</h1>
     <form v-on:submit.prevent="createBlog">
       <p>
-        ชื่อสินค้า:
+        จักรยาน
         <input type="text" v-model="blog.title" />
       </p>
       <transition name="fade">
@@ -40,7 +40,7 @@
             />
             <br />
             <button v-on:click.prevent="useThumbnail(picture.name)">
-              Thumbnail
+              upload
             </button>
             <button v-on:click.prevent="delFile(picture)">Delete</button>
           </li>
@@ -50,19 +50,19 @@
     
   
       <p>
-        รายละเอียด :
+        แบรนด์
         <input type="text" v-model="blog.content" />
       </p>
       <p>
-        ราคา :
+        ประเภทจักรยาน
         <input type="text" v-model="blog.category" />
       </p>
       <p>
-        จำนวน :
+        เฟรม
         <input type="text" v-model="blog.status" />
       </p>
       <p>
-        <button type="submit">เพิ่มสินค้า</button>
+        <button type="submit">เพิ่มข้อมูล</button>
       </p>
     </form>
   </div>
