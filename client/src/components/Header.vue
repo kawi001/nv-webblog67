@@ -18,7 +18,7 @@ export default {
   methods:{
     isLogin(){
       return this.$store.getters.isUserLoggedIn;
-    },
+    }, 
     logout(){
       this.$store.dispatch('logout');
       this.$router.push({name: 'login'});
