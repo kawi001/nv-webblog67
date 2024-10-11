@@ -3,7 +3,7 @@
     <h1>เพิ่มข้อมูล</h1>
     <form v-on:submit.prevent="createBlog">
       <p>
-        จักรยาน
+        ชื่อจักรยาน
         <input type="text" v-model="blog.title" />
       </p>
       <transition name="fade">
@@ -191,18 +191,63 @@ export default {
   },
 };
 </script>
-
 <style scoped>
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+form {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 600px;
+  margin: auto;
+}
+
+p {
+  margin: 15px 0;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  transition: border-color 0.3s;
+}
+
+input[type="text"]:focus {
+  border-color: #80bdff;
+  outline: none;
+}
+
 .dropbox {
   outline: 2px dashed grey;
   outline-offset: -10px;
   background: lemonchiffon;
   color: dimgray;
-  padding: 10px;
+  padding: 20px;
   min-height: 200px;
   position: relative;
   cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.3s;
 }
+
+.dropbox:hover {
+  background: khaki;
+}
+
 .input-file {
   opacity: 0;
   width: 100%;
@@ -211,34 +256,48 @@ export default {
   cursor: pointer;
 }
 
-.dropbox:hover {
-  background: khaki;
-}
-
 .dropbox p {
   font-size: 1.2em;
   text-align: center;
   padding: 50px 0;
 }
+
 ul.pictures {
   list-style: none;
   padding: 0;
   margin: 0;
-  float: left;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  display: flex;
+  flex-wrap: wrap;
 }
+
 ul.pictures li {
-  float: left;
+  margin: 10px;
+  text-align: center;
 }
+
 ul.pictures li img {
   max-width: 180px;
-  margin-right: 20px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-.clearfix {
-  clear: both;
-}
+
 .thumbnail-pic img {
-  width: 200px;
+  width: 100%;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
 }
 </style>

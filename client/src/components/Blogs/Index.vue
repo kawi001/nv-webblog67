@@ -6,7 +6,7 @@
         <p><button class="btn success" v-on:click="navigateTo('/blog/create')">เพิ่มสินค้า</button></p>
 
         <div v-for="blog in blogs" v-bind:key="blog.id" class="blog-card">
-            <h3><strong>จักรยาน</strong> {{ blog.title }}</h3>
+            <h3><strong>ชื่อจักรยาน</strong> {{ blog.title }}</h3>
 
             <!-- แสดงรูปภาพ Thumbnail -->
             <transition name="fade">
