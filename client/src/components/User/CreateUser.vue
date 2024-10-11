@@ -18,7 +18,7 @@
         <label for="password">Password:</label>
         <input type="password" id="password" v-model="user.password" required />
       </div>
-      <div class="form-group">
+      <div class="form-group button-container">
         <button type="submit" class="submit-button">Create User</button>
       </div>
     </form>
@@ -54,20 +54,21 @@ export default {
 
 <style scoped>
 .register-container {
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  padding: 20px;
   max-width: 400px;
-  margin: 0 auto;
-  padding: 40px;
-  border: 1px solid #333;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  background-color: #000; /* Black background */
-  color: #ffcc00; /* Yellow text */
+  margin: 20px auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: 'Arial', sans-serif;
+  color: #333;
 }
 
 h1 {
   text-align: center;
-  color: #ffcc00; /* Yellow */
-  font-size: 24px; /* Increased font size */
+  color: #4caf50;
+  margin-bottom: 20px;
+  font-size: 24px;
 }
 
 .register-form {
@@ -81,37 +82,52 @@ h1 {
 
 label {
   font-weight: bold;
-  color: #ffcc00; /* Yellow text */
-  font-size: 16px; /* Increased font size */
+  margin-bottom: 5px;
+  color: #555;
 }
 
 input {
+  width: 100%;
   padding: 10px;
-  border: 1px solid #ffcc00; /* Yellow border */
-  border-radius: 4px;
-  outline: none;
-  transition: border-color 0.3s;
-  color: #fff; /* White text for input fields */
-  background-color: #333; /* Dark background for input fields */
-  font-size: 16px; /* Increased font size */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em;
+  transition: border-color 0.3s ease;
+  color: #333;
 }
 
 input:focus {
-  border-color: #ffcc00; /* Yellow focus color */
+  border-color: #4caf50;
+  outline: none;
+}
+
+.button-container {
+  text-align: center;
+  margin-top: 20px;
 }
 
 .submit-button {
-  background-color: #ffcc00; /* Yellow */
-  color: #333; /* Dark text */
-  padding: 10px;
+  background-color: #4caf50;
+  color: white;
   border: none;
-  border-radius: 4px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 18px;
   cursor: pointer;
-  font-size: 18px; /* Increased font size */
-  transition: background-color 0.3s;
+  transition: background-color 0.3s ease;
 }
 
 .submit-button:hover {
-  background-color: #e6b800; /* Darker yellow on hover */
+  background-color: #45a049;
+}
+
+@media (max-width: 768px) {
+  .register-container {
+    padding: 15px;
+  }
+
+  .submit-button {
+    width: 100%;
+  }
 }
 </style>
